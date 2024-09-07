@@ -40,7 +40,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/ClaudioMartinH/7.0-chat-app-claudimartin.git
+git clone [https://github.com/ClaudioMartinH/7.0-chat-app-claudimartin.git](https://github.com/ClaudioMartinH/7.1-claudimartin-chat-app.git)
 
 # Instala las dependencias
 npm run install
