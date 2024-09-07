@@ -1,0 +1,57 @@
+/* Estilos personalizados */
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.carousel-item {
+  background-color: #f5f5f5; /* Color de fondo personalizado para los items del carrusel */
+}
+
+.carousel-caption {
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo oscuro semitransparente para el texto del carrusel */
+  border-radius: 5px;
+}
+
+.featurette-divider {
+  border-top: 2px solid #e5e5e57c;
+}
+
+.btn-custom {
+  background-color: #0056b3;
+  color: #fff;
+}
+.btn-custom:hover {
+  background-color: #b0b0b0;
+  color: #143198;
+}
+.carousel-item {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+.dark-bg {
+  background-color: #343a40; /* Fondo oscuro */
+  color: white; /* Color de texto blanco para contraste */
+  padding: 20px; /* Ajusta el espacio alrededor del contenido */
+}
+.center-content {
+  text-align: center; /* Centra el texto */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos dentro del div */
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.styles.css" />
+  </head>
+
+  <body class="d-flex flex-column min-vh-90">
+    <header>
+      <div class="container-fluid">
+        <span id="roomName"></span>
+        <h2 class="header2">ITAcademy Chat</h2>
+        <span id="displayUserName"></span>
+      </div>
+    </header>
+    <main class="container-fluid d-flex flex-column-reverse min-vh-100">
+      <div class="container-md">
+        <div class="row">
+          <div class="col-sm-7">
+            <div class="container">Sala de Chat</div>
+            <div class="row auto">
+              <ul class="list-group messages-container" id="messages"></ul>
+            </div>
+            <form id="form">
+              <input
+                class="form-control"
+                type="text"
+                name="message"
+                id="input"
+                placeholder="Escribe tu mensaje aquí..."
+                autocomplete="off"
+              />
+              <button
+                class="btn btn-outline-light btn-sm"
+                type="submit"
+                title="Enviar mensaje"
+              >
+                Enviar
+              </button>
+            </form>
+          </div>
+          <div class="col-sm-3">
+            <div class="container">Buscador de Usuarios</div>
+            <ul
+              class="users-online list-group users-container"
+              id="users-online"
+            ></ul>
+            <form id="search-users-form">
+              <input
+                class="form-control"
+                type="text"
+                id="searchUsers"
+                placeholder="Buscar usuarios..."
+                autocomplete="off"
+                title="Introduce el nombre de usuario"
+              />
+              <button
+                class="btn btn-outline-dark btn-sm"
+                type="submit"
+                title="Buscar un usuario"
+                id="searchUsersButton"
+              >
+                Ir a chat privado
+              </button>
+              <button
+                class="btn btn-outline-dark btn-sm"
+                id="backToChatButton2"
+              >
+                Volver a Sala Principal
+              </button>
+            </form>
+
+            <div class="container">Buscador de Salas</div>
+            <ul
+              class="users-online list-group rooms-container"
+              id="rooms-list"
+            ></ul>
+            <form id="room-form">
+              <input
+                class="form-control"
+                type="text"
+                id="roomInput"
+                placeholder="Introduce el nombre de la sala..."
+                autocomplete="off"
+              />
+              <button
+                class="btn btn-outline-light btn-sm"
+                type="submit"
+                id="searchRoom"
+                title="Buscar Salas"
+                disabled
+              >
+                Buscar
+              </button>
+              <button
+                class="btn btn-outline-light btn-sm"
+                type="submit"
+                id="createRoom"
+                title="Crear una sala nueva"
+              >
+                Crear
+              </button>
+              <button
+                class="btn btn-outline-light btn-sm"
+                type="button"
+                id="joinRoom"
+                title="Ir a sala introducida"
+              >
+                Ir a sala
+              </button>
+            </form>
+          </div>
+          <div class="col-1">
+            <button
+              class="logout-button"
+              id="logoutButton"
+              title="Salir"
+            ></button>
+            <button
+              class="settings-button"
+              id="settingsButton"
+              title="Configuración"
+            ></button>
+            <div id="configMenu" class="dropdown-menu dropdown-menu-end">
+              <form
+                id="form-data"
+                name="form-data"
+                method="POST"
+                action="/api/users/update"
+                enctype="multipart/form-data"
+              >
+                <div class="dropdown-header">Menú de configuración</div>
+                <button type="button" class="dropdown-item" id="editButton">
+                  Editar Usuario
+                </button>
+                <button type="button" class="dropdown-item" id="deleteButton">
+                  Eliminar Usuario
+                </button>
+                <a
+                  href="mailto:martinherranzc@gmail.com?subject=Soporte%20Técnico&body=Hola%2C%20necesito%20ayuda%20con%20el%20problema%20X."
+                  class="dropdown-item"
+                  id="contactButton"
+                >
+                  Contacto
+                </a>
+                <button
+                  type="button"
+                  class="dropdown-item"
+                  id="backToChatButton"
+                >
+                  Volver al chat
+                </button>
+                <div class="dropdown-divider"></div>
+                <div id="formContainer" class="px-2 hidden">
+                  <div class="mb-2">
+                    <label for="fullName" class="form-label"
+                      >Nombre y apellidos</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control-sm"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Nombre completo"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label for="userName" class="form-label"
+                      >Nombre de Usuario</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control-sm"
+                      id="userName"
+                      name="userName"
+                      placeholder="nombre de usuario"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label for="email" class="form-label"
+                      >Correo Electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control-sm"
+                      id="email"
+                      name="email"
+                      placeholder="example@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label for="password" class="form-label"
+                      >Tu Contraseña</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control-sm"
+                      id="password"
+                      name="password"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label for="confirmPassword" class="form-label"
+                      >Confirma tu contraseña</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control-sm"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      required
+                    />
+                  </div>
+                  <div class="mb-2">
+                    <label for="profilePic" class="form-label"
+                      >Imagen de Perfil</label
+                    >
+                    <input
+                      type="file"
+                      class="form-control-sm"
+                      id="profilePic"
+                      name="profilePic"
+                      accept="image/*"
+                    />
+                  </div>
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="submitButton"
+                  >
+                    Enviar Cambios
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <a href="https://github.com/ClaudioMartinH/" class="btn btn-outline-light"
+        >Claudio Martin Herranz 2024</a
+      >
+      <a
+        href="https://itacademy.barcelonactiva.cat/login/index.php"
+        class="btn btn-outline-light"
+        >ITAcademy Barcelona Activa</a
+      >
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .getElementById("settingsButton")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("configMenu");
+          menu.classList.toggle("show");
+        });
+
+      document.addEventListener("click", function (event) {
+        var isClickInside = document
+          .getElementById("settingsButton")
+          .contains(event.target);
+        var configMenu = document.getElementById("configMenu");
+
+        // Cierra el menú si se hace clic fuera de él
+        if (!isClickInside && !configMenu.contains(event.target)) {
+          configMenu.classList.remove("show");
+        }
+      });
+
+      // Toggle the edit form visibility
+      document
+        .getElementById("editButton")
+        .addEventListener("click", function (event) {
+          var formContainer = document.getElementById("formContainer");
+          formContainer.classList.toggle("hidden");
+
+          // Prevent closing the configMenu
+          event.stopPropagation();
+        });
+    </script>
+    <script type="module" src="../scripts/main.js"></script>
+  </body>
+</html>

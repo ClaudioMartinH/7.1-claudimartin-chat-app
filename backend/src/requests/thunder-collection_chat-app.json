@@ -1,0 +1,136 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "chat-app",
+    "collectionId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+    "dateExported": "2024-08-30T00:22:02.269Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5526658d-4087-4d91-8174-6191eca1417d",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "/",
+            "url": "localhost:5050/",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-08-14T17:33:01.756Z",
+            "modified": "2024-08-14T17:33:10.195Z",
+            "headers": []
+        },
+        {
+            "_id": "1f400e5c-4779-4eeb-be06-449a9438745e",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "signup",
+            "url": "localhost:5050/api/users/signup",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-08-14T17:31:21.085Z",
+            "modified": "2024-08-14T17:33:20.120Z",
+            "headers": []
+        },
+        {
+            "_id": "f1eba191-d4e1-45e9-98bd-d595b97f2da8",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:5050/api/users/login",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-08-14T17:36:18.515Z",
+            "modified": "2024-08-14T17:36:23.278Z",
+            "headers": []
+        },
+        {
+            "_id": "6b678199-06a0-4fab-bd27-4dd7d949d87e",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "login",
+            "url": "localhost:5050/api/users/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-08-14T17:33:39.932Z",
+            "modified": "2024-08-14T17:35:50.359Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userName\": \"claudimartin\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b542bbc9-a942-43a6-a0a4-46444b4493fa",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "room1",
+            "url": "http://localhost:5050/chat?roomName=room1",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-08-14T17:37:18.995Z",
+            "modified": "2024-08-30T00:07:15.820Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "roomName",
+                    "value": "room1",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "a741197b-ed4f-4f1b-b37f-49784f6f5e4e",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "signup",
+            "url": "http://localhost:5050/api/users/login",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-08-30T00:11:31.023Z",
+            "modified": "2024-08-30T00:12:38.976Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userName\": \"claudimartin\",\n  \"password\": \"123456\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJkMmVkZGQ3MTQ0MjY4ZTJkNWUxYjYiLCJpYXQiOjE3MjM4NTE0MDksImV4cCI6MTcyMzg1NTAwOX0.E7ezz0epLOIUHjZEjVIC7A7n9y8h7KgZHECHVxkKpS8"
+            }
+        },
+        {
+            "_id": "189c0648-983f-4f48-afec-33fcee6a034f",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "/update/66d0bde07419d0da1dc32e05",
+            "url": "http://localhost:5050/api/users/logout",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-08-30T00:13:57.495Z",
+            "modified": "2024-08-30T00:19:09.609Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJkMmVkZGQ3MTQ0MjY4ZTJkNWUxYjYiLCJpYXQiOjE3MjM4NTE0MDksImV4cCI6MTcyMzg1NTAwOX0.E7ezz0epLOIUHjZEjVIC7A7n9y8h7KgZHECHVxkKpS8"
+            }
+        },
+        {
+            "_id": "e39b017a-64e3-4e41-9b79-7364becac5a6",
+            "colId": "84e133bb-5ec8-4581-bb82-c5931c14062a",
+            "containerId": "",
+            "name": "logout",
+            "url": "http://localhost:5050/api/users/logout",
+            "method": "POST",
+            "sortNum": 90000,
+            "created": "2024-08-30T00:18:46.686Z",
+            "modified": "2024-08-30T00:20:36.101Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJkMmVkZGQ3MTQ0MjY4ZTJkNWUxYjYiLCJpYXQiOjE3MjM4NTE0MDksImV4cCI6MTcyMzg1NTAwOX0.E7ezz0epLOIUHjZEjVIC7A7n9y8h7KgZHECHVxkKpS8"
+            }
+        }
+    ],
+    "ref": "fJx7pmyxohFXH2Y2m4Dlca4W3lnBVZe-oqgIeJHbWU1fHmsQP9MClsyH5BLbB9vaywZQ5hXVXiz0MEcWgsnYow"
+}

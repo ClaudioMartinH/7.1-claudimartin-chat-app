@@ -1,0 +1,221 @@
+body,
+html {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+}
+
+.placeholder-item {
+  text-align: center;
+  color: #88888849;
+  padding: 10px;
+}
+
+input {
+  opacity: 0.7;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.col-sm-7 {
+  flex-grow: 1;
+}
+.col-sm-5 {
+  flex-grow: 0;
+}
+/* .col-1 {
+  float: right;
+  margin-left: 10px;
+} */
+.col-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 5%;
+}
+.messages-container {
+  height: 600px; /* Adjust this height as needed */
+  max-height: 600px;
+  overflow-y: auto;
+  flex-grow: 2;
+}
+
+.users-container,
+.rooms-container {
+  height: 252px;
+  max-height: 252px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.users-container ul,
+.rooms-container ul {
+  margin-top: 0; /* Remove negative margin from first child */
+}
+
+.col-sm-7 .form-control,
+.col-sm-7 .btn {
+  margin-top: auto;
+}
+
+.list-group-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: rgba(208, 213, 202, 0.327);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logout-button,
+.settings-button {
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+  border-radius: 15px;
+}
+
+.logout-button {
+  background-image: url("../img/logout.png");
+  background-size: cover;
+}
+
+.settings-button {
+  background-image: url("../img/settings.png");
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.header {
+  text-align: center;
+  margin: 0; /* Remove unnecessary margin */
+  padding: 0;
+
+  font-size: 18px;
+  text-shadow: darkgray;
+  font-weight: bolder;
+  color: rgb(19, 17, 17);
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
+  padding-bottom: 0;
+}
+
+.header2 {
+  color: rgb(161, 45, 142);
+}
+
+li {
+  padding: 10px;
+  display: block;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 1;
+  list-style-type: none;
+  background-color: #ffffff5e;
+  max-height: fit-content;
+}
+
+.messagesent {
+  background-color: rgba(51, 241, 51, 0.646);
+  margin-left: auto;
+  text-align: right;
+  width: fit-content;
+  height: fit-content;
+}
+
+.messagereceived {
+  background-color: rgba(13, 24, 24, 0.632);
+  color: #ccc;
+  margin-right: auto;
+  text-align: left;
+  height: fit-content;
+  width: fit-content;
+}
+
+.senderSpan {
+  font-weight: bold;
+  font-size: x-small;
+}
+.users-online {
+  flex-grow: 1;
+}
+
+.users-online > li {
+  background-color: rgba(44, 253, 44, 0);
+  margin-top: 0;
+  font-weight: bold;
+  font-size: smaller;
+  width: fit-content;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+footer {
+  color: azure;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: small;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+main {
+  margin-top: -150px;
+  display: fixed;
+  flex-grow: 1;
+  overflow-y: scroll;
+  max-height: 600px;
+}
+
+header,
+footer {
+  padding: 10px 0;
+  text-align: center;
+}
+
+button {
+  width: fit-content;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* El track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* El thumb */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* El thumb al pasar el ratón encima */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

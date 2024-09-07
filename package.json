@@ -1,0 +1,20 @@
+{
+  "name": "chat-app-claudimartin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm run install:backend && npm run install:frontend",
+    "build": "npm run build:backend && npm run build:frontend && npm run copy:env",
+    "build:backend": "cd backend && npm run build",
+    "install:backend": "cd backend && npm install",
+    "build:frontend": "cd frontend && npm run build",
+    "install:frontend": "cd frontend && npm install",
+    "copy:env": "cp ./backend/.env backend/dist/.env",
+    "start": "node backend/dist/src/server.js",
+    "test": "cd backend/dist && npm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

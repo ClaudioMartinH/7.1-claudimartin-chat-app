@@ -1,0 +1,83 @@
+body,
+html {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  height: 100%;
+}
+
+.centered-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80vh;
+  padding-top: 15px;
+  padding-bottom: 0;
+}
+
+.form-signin {
+  max-width: 634px; /* Ajusta este valor para cambiar el ancho */
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  padding-top: 0;
+}
+
+.form-floating > input {
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+  background-color: rgba(100, 148, 237, 0.193);
+}
+
+.header2 {
+  font-weight: bolder;
+  color: rgb(237, 0, 166);
+}
+
+.link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.btn {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+.header-full-width {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(100, 148, 237, 0.193);
+  color: white;
+  padding: 20px 0;
+}

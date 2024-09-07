@@ -1,0 +1,8 @@
+POST http://localhost:5050/api/rooms/private
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmJkMmVkZGQ3MTQ0MjY4ZTJkNWUxYjYiLCJpYXQiOjE3MjM4NTE0MDksImV4cCI6MTcyMzg1NTAwOX0.E7ezz0epLOIUHjZEjVIC7A7n9y8h7KgZHECHVxkKpS8
+
+{
+  "sender": "jaguersito",
+  "recipient": "silvitui"
+}

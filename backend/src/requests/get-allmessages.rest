@@ -1,0 +1,2 @@
+GET http://localhost:5050/api/messages/all
+Cookie: authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmM4OGUzOTFmMzQ2ZTNjYWU1ZDNlYzAiLCJpYXQiOjE3MjQ0MTk4NDQsImV4cCI6MTcyNDQ1NTg0NH0.zkTjIk7e91ATzwwj9zJg8-8viOCdSnM3GkJY-1Yhzig

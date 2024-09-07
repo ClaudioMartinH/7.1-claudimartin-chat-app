@@ -1,0 +1,177 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+:root {
+  color-scheme: light dark;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+.form-container,
+.form-container3 {
+  background-color: rgba(0, 0, 0, 0.479); /* Fondo negro semi-transparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  animation: fadein;
+}
+.form-container {
+  color: white;
+}
+.form-container3 {
+  color: rgb(176, 132, 132);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* input {
+  animation: slidein 0.5s ease;
+} */
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 13px;
+  color: rgb(213, 194, 194);
+}
+
+.form-group input {
+  width: 80%;
+  background-color: rgba(148, 143, 143, 0.6);
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  color: rgb(213, 194, 194);
+}
+
+.form-group button,
+.button1 {
+  padding: 15px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #193483b3;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: darkgrey;
+  transition: all 0.3s linear;
+}
+
+.form-group button:hover {
+  background-color: #45406dae;
+  transform: translateY(-5px);
+}
+.button1:hover {
+  background-color: #45406dae;
+  transform: translateY(-5px);
+}
+.link {
+  margin-top: 2px;
+  margin-bottom: 5px;
+  justify-self: left;
+  text-align: left;
+  cursor: progress;
+  color: darkkhaki;
+}
+.link:hover {
+  color: #46a0ff;
+  cursor: progress;
+}
+
+.header,
+.header3,
+.header5 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-shadow: darkgray;
+}
+.header {
+  color: darkgrey;
+}
+.header3 {
+  font-weight: bolder;
+  color: rgb(19, 17, 17);
+}
+.header5 {
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+}
+.header2,
+.header4 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-shadow: darkgray;
+}
+.header2 {
+  font-weight: bold;
+  color: rgb(240, 190, 190);
+}
+.header4 {
+  font-weight: bolder;
+  color: rgb(237, 0, 166);
+}
+
+label {
+  text-align: center;
+  font-size: small;
+  color: rgb(213, 194, 194);
+}
+
+.jost header,
+.form-container,
+.link {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+input,
+div,
+.link {
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-name: slidein;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

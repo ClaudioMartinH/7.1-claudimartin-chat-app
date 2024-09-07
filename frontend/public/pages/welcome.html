@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.122.0" />
+    <title>Bienvenid@ a chat app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/welcome.styles.css">
+  </head>
+  <body>
+    
+  <div class="container">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-2 border-bottom">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+          <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+      </div>
+      <div class="col-md-3 text-end">
+        <a class="btn btn-outline-primary me-2" href="api/users/login">Acceder</a>
+        <a class="btn btn-custom" href="api/users/signup">Regístrate</a>
+      </div>
+    </header>
+  </div>  
+    <main>
+      <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>        
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+          <img width="cover" src="../img/itacademywood.jpg" alt="Imagen 1">
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>Bienvenid@ al Chat de la ITAcademy</h1>
+                <p>
+                 Aquí podrás encontrarte con tus compañeros, ex-alumnos y demás gente apasionada del mundo de la programación. Un espacio para compartir, debatir y ayudarse mutuamente a crecer en esta gran industria IT.
+                </p>
+                <p><a class="btn btn-custom" href="api/users/signup">Regístrate</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img width="cover" src="../img/cibernarium.jpg" alt="Imagen 1">
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1>No esperes más, entra a chatear.</h1>
+                <p>
+                  No esperes más, tus contactos quieren saludarte.
+                </p>
+                <p><a class="btn btn-custom" href="api/users/login">Acceder</a></p>
+              </div>
+            </div>
+          </div>       
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#myCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      <div class="container marketing">
+        <div class="row">
+          <div class="col-lg-4 center-content">
+            <img
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              src="../img/itlogo2.png"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect width="100%" height="100%" fill="#868e96" />
+            </img>
+            <h2 class="fw-normal">IT Academy</h2>
+            <p>La prestigiosa academia TIC de Barcelona Activa, uno de los Bootcamps mejor valorados de la actualidad, con un personal docente al nivel de la categoría de la escuela.</p>
+            <p>
+              <a class="btn btn-secondary" href="https://itacademy.barcelonactiva.cat/login/index.php">Ir a la web &raquo;</a>
+            </p>
+          </div>
+          <div class="col-lg-4 center-content">
+            <img
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              src="../img/github.png"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect width="100%" height="100%" fill="#868e96" />
+            </img>
+            <h2 class="fw-normal">GitHub</h2>
+            <p>Aquí podrás encontrar todo mi código. Desde los ejercicios que realicé en Fonaments de la Programació, hasta este último proyecto de la especialización en NodeJS</p>
+            <p>
+              <a class="btn btn-secondary" href="https://github.com/ClaudioMartinH">Visitar GitHub &raquo;</a>
+            </p>
+          </div>
+          <div class="col-lg-4 center-content">
+            <img
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              src="../img/logo.png"
+              role="img"
+              aria-label="Placeholder"
+              preserveAspectRatio="xMidYMid slice"
+              focusable="false"
+            >
+              <rect width="100%" height="100%" fill="#868e96" />
+            </img>
+            <h2 class="fw-normal">Contacto</h2>
+            <p>Aquí podrás contactar directamente conmigo en el mail, ya sea por incidencias o para contratación.</p>
+            <p>
+              <a class="btn btn-secondary" href="mailto:martinherranzc@gmail.com?subject=Soporte%20Técnico&body=Hola%2C%20necesito%20ayuda%20con%20el%20problema%20X.">Escribir correo &raquo;</a>
+            </p>
+          </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
