@@ -15,7 +15,7 @@ html {
 }
 
 .form-signin {
-  max-width: 634px; /* Ajusta este valor para cambiar el ancho */
+  max-width: 634px;
   width: 100%;
   padding: 15px;
   border-radius: 10px;

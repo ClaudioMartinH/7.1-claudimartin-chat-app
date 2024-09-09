@@ -37,7 +37,7 @@ input {
   width: 5%;
 }
 .messages-container {
-  height: 600px; /* Adjust this height as needed */
+  height: 600px;
   max-height: 600px;
   overflow-y: auto;
   flex-grow: 2;
@@ -56,7 +56,7 @@ input {
 
 .users-container ul,
 .rooms-container ul {
-  margin-top: 0; /* Remove negative margin from first child */
+  margin-top: 0;
 }
 
 .col-sm-7 .form-control,
@@ -98,7 +98,7 @@ input {
 
 .header {
   text-align: center;
-  margin: 0; /* Remove unnecessary margin */
+  margin: 0;
   padding: 0;
 
   font-size: 18px;

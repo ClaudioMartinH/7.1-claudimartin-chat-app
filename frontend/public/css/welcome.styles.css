@@ -1,4 +1,3 @@
-/* Estilos personalizados */
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;
@@ -14,16 +13,11 @@
 }
 
 .carousel-item {
-  background-color: #f5f5f5; /* Color de fondo personalizado para los items del carrusel */
+  background-color: #f5f5f5;
 }
 
 .carousel-caption {
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Fondo oscuro semitransparente para el texto del carrusel */
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
 }
 
