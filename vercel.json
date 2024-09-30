@@ -16,19 +16,19 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/welcome.html"
+      "dest": "/pages/welcome.html"
     },
     {
       "src": "/api/users/login",
-      "dest": "/login.html"
+      "dest": "pages/login.html"
     },
     {
       "src": "/api/users/signup",
-      "dest": "/signup.html"
+      "dest": "pages/signup.html"
     },
     {
       "src": "/main",
-      "dest": "/main.html"
+      "dest": "pages/main.html"
     }
   ]
 }
