@@ -1,34 +1,21 @@
 {
   "compilerOptions": {
     "target": "ES2017",
-<<<<<<< HEAD
     "lib": [
       "ES2017",
       "DOM"
     ],
-    "outDir": "/public",
-=======
-    "lib": ["ES2017", "DOM"],
     "outDir": "public/scripts",
->>>>>>> b2706de (Update tsconfig.json)
     "module": "ESNext",
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
     "rootDir": "public/scripts"
   },
   "include": [
-    "public/scripts/**/*.ts"
+    "public/scripts/*.ts"
   ],
   "exclude": [
     "node_modules"
   ]
 }
-=======
-    "rootDir": "scripts"
-  },
-  "include": ["scripts/**/*.ts"],
-  "exclude": ["node_modules", "public"]
-}
->>>>>>> b2706de (Update tsconfig.json)

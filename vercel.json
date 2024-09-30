@@ -15,16 +15,20 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
-      "dest": "backend/dist/index.js"
+      "src": "/",
+      "dest": "/pages/welcome.html"
     },
     {
-      "src": "/uploads/(.*)",
-      "dest": "/backend/uploads/$1"
+      "src": "/login",
+      "dest": "/pages/login.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/frontend/public/$1"
+      "src": "/signup",
+      "dest": "/pages/signup.html"
+    },
+    {
+      "src": "/main",
+      "dest": "/pages/main.html"
     }
   ]
 }

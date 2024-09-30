@@ -16,7 +16,6 @@
 ![JWT](https://img.shields.io/badge/JWT-Authentication-orange)
 ![Google OAuth](https://img.shields.io/badge/Google-OAuth2-red)
 
-
 ## 🚀 Descripción
 
 ***Chat APP ITAcademy por Claudio Martin*** es una aplicación de chat en tiempo real construida con **Node.js, Express, MongoDB, Socket.IO y Google OAuth** para autenticación segura. Desarrollada íntegramente en ***Typescript***.<br> El frontend ha sido desarrollado con **Bootstrap, CSS y HTML**.<br> Es perfecta para aprender sobre desarrollo full-stack y como integrar diferentes tecnologías.<br> La entrega hace énfasis en el desarrollo de una API REST que integre un servidor Socket IO para permitir la comunicación en tiempo real con los demás usuarios, además de aplicar autenticación con JWT, Google OAUTH20, y poder ingresar como usuario invitado.<br> Como funcionalidades extra he desarrollado un buscador de usuarios conectados, salas de chat disponibles, y posibilidad de crear salas de chat a las que todos pueden unirse, y otras salas para conversaciones privadas solo accesibles para los 2 usuarios que la integren. Además, he aplicado tanto la función *debounce* para retardar el evento de busqueda de los inputs, asi como una función *throttle* para actualizar las listas de usuarios y salas disponibles. Y la persistencia de datos con mongoose. Así he podido integrar varias de las entregas anteriores del curso.<br>

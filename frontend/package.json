@@ -4,15 +4,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "build": "tsc",
-    "install": "echo 'Installing frontend dependencies'",
-    "copy-static": "cp -r pages public/ && cp -r css public/ && cp -r img public/"
-=======
-    "build": "tsc -p tsconfig.json && npm run copy-static",
-    "copy-static": "cp -r pages public/ && cp -r css public/ && cp -r img public/",
+    "build": "tsc -p tsconfig.json",
     "install": "echo 'Installing frontend dependencies'"
->>>>>>> 4c4ac6d (updated package front for vercel)
   },
   "keywords": [],
   "author": "",
