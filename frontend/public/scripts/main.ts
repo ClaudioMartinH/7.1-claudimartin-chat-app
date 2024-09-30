@@ -17,16 +17,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (parts.length === 2) return parts.pop()?.split(";").shift() || null;
     return null;
   }
+
   const cookiesToken = getCookie("authToken");
   const cookiesUserId = getCookie("userId");
   const cookiesUserName = getCookie("userName");
+
   if (cookiesToken) localStorage.setItem("authToken", cookiesToken);
   if (cookiesUserId) localStorage.setItem("userId", cookiesUserId);
   if (cookiesUserName) localStorage.setItem("userName", cookiesUserName);
+
   const token = localStorage.getItem("authToken");
   console.log("Token recibido: ", token);
+
   if (!token) {
-    window.location.href = "api/users/login";
+    // Redirigir a la URL correcta según el entorno
+    window.location.href =
+      window.location.hostname === "localhost"
+        ? "/api/users/login"
+        : "https://7-1-claudimartin-chat-app.vercel.app/api/users/login";
   }
 
   function getElementById<T extends HTMLElement>(id: string): T | null {

@@ -54,8 +54,13 @@ window.addEventListener("DOMContentLoaded", () => {
       );
     }
 
+    const backendUrl =
+      window.location.hostname === "localhost"
+        ? "http://localhost:5050" // URL del backend en desarrollo
+        : "https://7-1-claudimartin-chat-app.vercel.app"; // URL del backend en producción
+
     try {
-      const response = await fetch("/api/users/signup", {
+      const response = await fetch(`${backendUrl}/api/users/signup`, {
         method: "POST",
         body: formData,
       });
