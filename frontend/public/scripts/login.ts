@@ -75,7 +75,10 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log(`localstorage.setItem de userType = ${userType}`);
         console.log(`localstorage.setItem de profilepic = ${profilePic}`);
         emitUserConnected(userId, userName, userType, profilePic);
-        window.location.href = "/chat";
+        window.location.href =
+          window.location.hostname === "localhost"
+            ? "/chat"
+            : "https://7-1-claudimartin-chat-app.vercel.app/chat";
       } else {
         console.error("Token no recibido en la respuesta");
       }
@@ -121,7 +124,10 @@ window.addEventListener("DOMContentLoaded", () => {
           localStorage.setItem("userType", userType);
           console.log("Token recibido:", token);
           emitUserConnected(userId, userName, userType, profilePic);
-          window.location.href = "/chat";
+          window.location.href =
+            window.location.hostname === "localhost"
+              ? "/chat"
+              : "https://7-1-claudimartin-chat-app.vercel.app/chat";
         } else {
           console.error("Token no recibido en la respuesta");
         }
