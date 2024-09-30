@@ -1,9 +1,12 @@
 // @ts-ignore
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-const socket = io("http://localhost:5050", {
-  transports: ["websocket"],
-});
+const socket = io(
+  "http://localhost:5050" || "https://7-1-claudimartin-chat-app.vercel.app",
+  {
+    transports: ["websocket"],
+  }
+);
 document.addEventListener("DOMContentLoaded", () => {
   function getCookie(name: string): string | null {
     const value = `; ${document.cookie}`;

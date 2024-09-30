@@ -35,7 +35,7 @@ const origin =
 
 const io = new Server(server, {
   cors: {
-    origin: origin,
+    origin: `http://localhost:${PORT}`,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   },
@@ -43,6 +43,7 @@ const io = new Server(server, {
     maxDisconnectionDuration: 5000,
   },
 });
+
 const userController = new UserController();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -175,10 +176,10 @@ app.get("/logout", (req, res) => {
 app.get("/", (req, res) => {
   res.sendFile(path.join(frontendPath, "public/pages/welcome.html"));
 });
-app.get("/login", (req, res) => {
+app.get("/api/users/login", (req, res) => {
   res.sendFile(path.join(frontendPath, "public/pages/login.html"));
 });
-app.get("/signup", (req, res) => {
+app.get("/api/users/signup", (req, res) => {
   res.sendFile(path.join(frontendPath, "public/pages/signup.html"));
 });
 app.get("/chat", authMiddlewareJWT, (req, res) => {

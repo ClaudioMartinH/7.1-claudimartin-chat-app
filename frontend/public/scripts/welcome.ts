@@ -1,3 +1,3 @@
 function redirect() {
-  window.location.href = "api/users/login";
+  window.location.href = "/api/users/login";
 }
