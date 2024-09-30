@@ -137,7 +137,11 @@ app.use(
 
 app.use(
   cors({
-    origin: `http://localhost:${PORT}`,
+    origin: [
+      `http://localhost:${PORT}`,
+      "https://7-1-claudimartin-chat-app.vercel.app",
+      "https://7-1-claudimartin-chat-qj1v1ft6o-claudimartins-projects.vercel.app",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
