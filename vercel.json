@@ -20,15 +20,15 @@
     },
     {
       "src": "/api/users/login",
-      "dest": "pages/login.html"
+      "dest": "/pages/login.html"
     },
     {
       "src": "/api/users/signup",
-      "dest": "pages/signup.html"
+      "dest": "/pages/signup.html"
     },
     {
       "src": "/main",
-      "dest": "pages/main.html"
+      "dest": "/pages/main.html"
     }
   ]
 }
