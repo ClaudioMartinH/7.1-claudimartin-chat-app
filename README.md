@@ -45,6 +45,16 @@ git clone https://github.com/ClaudioMartinH/7.1-claudimartin-chat-app.git
 npm run install
 
 ```
+Necesitarás crear un archivo ``.env`` que contenga las siguientes variables:
+
+```bash
+MONGO_DB_URI=tu_string_de_conexion a mongodb
+PORT=5050
+JWT_SECRET=your_secret
+SESSION_SECRET=your_session_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
 
 He creado comandos desde la raíz del proyecto para que se ejecute sin necesidad de navegar por las diferentes carpetas.
 Una vez se hayan instalado las dependecias necesarias, incluso se copia el archivo ``.env`` de manera automatizada<br> Tan solo será necesario:
@@ -55,16 +65,6 @@ npm run build
 
 # y finalmente, para ejecutar el servidor (index.js)
 npm start
-```
-Necesitarás crear un archivo ``.env`` que contenga las siguientes variables:
-
-```bash
-MONGO_DB_URI=tu_string_de_conexion a mongodb
-PORT=5050
-JWT_SECRET=your_secret
-SESSION_SECRET=your_session_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
 ```
 
 Con estos sencillos comandos, una vez ejecutados uno a uno y en el orden establecido aquí,  tendremos el proyecto construido y funcionando pinchando el siguiente enlace:
