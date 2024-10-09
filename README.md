@@ -63,7 +63,8 @@ MONGO_DB_URI=tu_string_de_conexion a mongodb
 PORT=5050
 JWT_SECRET=your_secret
 SESSION_SECRET=your_session_secret
-GOOGLE_SECRET=your_secret
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
 ```
 
 Con estos sencillos comandos, una vez ejecutados uno a uno y en el orden establecido aquí,  tendremos el proyecto construido y funcionando pinchando el siguiente enlace:
