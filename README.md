@@ -45,7 +45,7 @@ git clone https://github.com/ClaudioMartinH/7.1-claudimartin-chat-app.git
 npm run install
 
 ```
-Necesitarás crear un archivo ``.env`` que contenga las siguientes variables:
+Necesitarás crear un archivo ``.env`` en la carpeta ``/backend``que contenga las siguientes variables:
 
 ```bash
 MONGO_DB_URI=tu_string_de_conexion a mongodb
