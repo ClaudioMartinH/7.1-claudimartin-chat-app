@@ -56,6 +56,15 @@ npm run build
 # y finalmente, para ejecutar el servidor (index.js)
 npm start
 ```
+Necesitarás crear un archivo ``.env`` que contenga las siguientes variables:
+
+```bash
+MONGO_DB_URI=tu_string_de_conexion a mongodb
+PORT=5050
+JWT_SECRET=your_secret
+SESSION_SECRET=your_session_secret
+GOOGLE_SECRET=your_secret
+```
 
 Con estos sencillos comandos, una vez ejecutados uno a uno y en el orden establecido aquí,  tendremos el proyecto construido y funcionando pinchando el siguiente enlace:
 
