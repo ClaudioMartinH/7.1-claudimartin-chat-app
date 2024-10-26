@@ -1,12 +1,7 @@
 // @ts-ignore
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-const socketUrl =
-  window.location.hostname === "localhost"
-    ? "http://localhost:5050"
-    : "https://7-1-claudimartin-chat-app.vercel.app";
-
-const socket = io(socketUrl, {
+const socket = io("http://localhost:5050", {
   transports: ["websocket"],
 });
 
@@ -31,10 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!token) {
     // Redirigir a la URL correcta según el entorno
-    window.location.href =
-      window.location.hostname === "localhost"
-        ? "/api/users/login"
-        : "https://7-1-claudimartin-chat-app.vercel.app/api/users/login";
+    window.location.href = "/api/users/login";
   }
 
   function getElementById<T extends HTMLElement>(id: string): T | null {

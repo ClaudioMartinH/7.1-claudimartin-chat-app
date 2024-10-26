@@ -53,14 +53,8 @@ window.addEventListener("DOMContentLoaded", () => {
         `https://anonymous-animals.azurewebsites.net/avatar/${userName}`
       );
     }
-
-    const backendUrl =
-      window.location.hostname === "localhost"
-        ? "http://localhost:5050" // URL del backend en desarrollo
-        : "https://7-1-claudimartin-chat-app.vercel.app"; // URL del backend en producción
-
     try {
-      const response = await fetch(`${backendUrl}/api/users/signup`, {
+      const response = await fetch(`http://localhost:5050/api/users/signup`, {
         method: "POST",
         body: formData,
       });

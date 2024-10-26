@@ -28,10 +28,6 @@ window.addEventListener("DOMContentLoaded", () => {
     });
     socket.emit("user connected", { userId, userName, userType, profilePic });
   };
-  const backendUrl =
-    window.location.hostname === "localhost"
-      ? "http://localhost:5050" // URL del backend en desarrollo
-      : "https://7-1-claudimartin-chat-app.vercel.app"; // URL del backend en producción
 
   formData.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -45,7 +41,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const response = await fetch(`${backendUrl}/api/users/login`, {
+      const response = await fetch(`http://localhost:5050/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,10 +71,7 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log(`localstorage.setItem de userType = ${userType}`);
         console.log(`localstorage.setItem de profilepic = ${profilePic}`);
         emitUserConnected(userId, userName, userType, profilePic);
-        window.location.href =
-          window.location.hostname === "localhost"
-            ? "/chat"
-            : "https://7-1-claudimartin-chat-app.vercel.app/chat";
+        window.location.href = window.location.href = "/chat";
       } else {
         console.error("Token no recibido en la respuesta");
       }
@@ -95,13 +88,16 @@ window.addEventListener("DOMContentLoaded", () => {
     guestLoginButton.addEventListener("click", async () => {
       const userType = "guest";
       try {
-        const response = await fetch(`${backendUrl}/api/users/guest-login`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include",
-        });
+        const response = await fetch(
+          `http://localhost:5050/api/users/guest-login`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            credentials: "include",
+          }
+        );
 
         if (!response.ok) {
           const responseData = await response.json();
@@ -124,10 +120,7 @@ window.addEventListener("DOMContentLoaded", () => {
           localStorage.setItem("userType", userType);
           console.log("Token recibido:", token);
           emitUserConnected(userId, userName, userType, profilePic);
-          window.location.href =
-            window.location.hostname === "localhost"
-              ? "/chat"
-              : "https://7-1-claudimartin-chat-app.vercel.app/chat";
+          window.location.href = "/chat";
         } else {
           console.error("Token no recibido en la respuesta");
         }
@@ -145,7 +138,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const googleLoginButton = document.getElementById("googleLoginButton");
   if (googleLoginButton) {
     googleLoginButton.addEventListener("click", () => {
-      window.location.href = `${backendUrl}/api/users/auth/google`;
+      window.location.href = `http://localhost:5050/api/users/auth/google`;
     });
   } else {
     console.error("Botón de inicio de sesión con Google no encontrado");

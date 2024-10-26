@@ -28,14 +28,9 @@ dotenv.config();
 const PORT = process.env.PORT || 3030;
 const app = express();
 const server = createServer(app);
-const origin =
-  process.env.NODE_ENV === "production"
-    ? "https://7-1-claudimartin-chat-app.vercel.app"
-    : `http://localhost:${PORT}`;
-
 const io = new Server(server, {
   cors: {
-    origin: `http://localhost:${PORT}`,
+    origin: "https://localhost:5050",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   },
@@ -137,11 +132,7 @@ app.use(
 
 app.use(
   cors({
-    origin: [
-      `http://localhost:${PORT}`,
-      "https://7-1-claudimartin-chat-app.vercel.app",
-      "https://7-1-claudimartin-chat-qj1v1ft6o-claudimartins-projects.vercel.app",
-    ],
+    origin: [`http://localhost:${PORT}`],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
