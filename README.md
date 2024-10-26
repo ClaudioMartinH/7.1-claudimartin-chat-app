@@ -63,7 +63,7 @@ Una vez se hayan instalado las dependecias necesarias, incluso se copia el archi
 # Compilar el proyecto completo y copiar las variables de entorno en dist/
 npm run build
 
-# y finalmente, para ejecutar el servidor (index.js)
+# y finalmente, para ejecutar el servidor (server.js)
 npm start
 ```
 
