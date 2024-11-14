@@ -1,9 +1,13 @@
 // @ts-ignore
 import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
 
-const socket = io("http://localhost:5050", {
-  transports: ["websocket"],
-});
+const socket = io(
+  "https://71-claudimartin-chat-app-production.up.railway.app",
+  {
+    // aqui cambiamos http://localhost:5050 por la direccion de railway
+    transports: ["websocket"],
+  }
+);
 
 document.addEventListener("DOMContentLoaded", () => {
   function getCookie(name: string): string | null {

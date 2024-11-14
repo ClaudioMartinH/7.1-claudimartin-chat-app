@@ -41,14 +41,18 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5050/api/users/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ userName, password, userType }),
-        credentials: "include",
-      });
+      const response = await fetch(
+        `https://71-claudimartin-chat-app-production.up.railway.app/api/users/login`,
+        {
+          // aqui cambiamos http://localhost:5050/api/users/login por la direccion de railway
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ userName, password, userType }),
+          credentials: "include",
+        }
+      );
 
       if (!response.ok) {
         const responseData = await response.json();
@@ -71,7 +75,7 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log(`localstorage.setItem de userType = ${userType}`);
         console.log(`localstorage.setItem de profilepic = ${profilePic}`);
         emitUserConnected(userId, userName, userType, profilePic);
-        window.location.href = window.location.href = "/chat";
+        window.location.href = "/chat";
       } else {
         console.error("Token no recibido en la respuesta");
       }
@@ -89,7 +93,7 @@ window.addEventListener("DOMContentLoaded", () => {
       const userType = "guest";
       try {
         const response = await fetch(
-          `http://localhost:5050/api/users/guest-login`,
+          `https://71-claudimartin-chat-app-production.up.railway.app/api/users/guest-login`, // aqui cambiamos `http://localhost:5050/api/users/guest-login` por la direccion de railway
           {
             method: "POST",
             headers: {
@@ -138,7 +142,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const googleLoginButton = document.getElementById("googleLoginButton");
   if (googleLoginButton) {
     googleLoginButton.addEventListener("click", () => {
-      window.location.href = `http://localhost:5050/api/users/auth/google`;
+      window.location.href = `https://71-claudimartin-chat-app-production.up.railway.app/api/users/auth/google`; // aqui tambien cambiamos `http://localhost:5050/api/users/auth/google` por la direccion de railway
     });
   } else {
     console.error("Botón de inicio de sesión con Google no encontrado");

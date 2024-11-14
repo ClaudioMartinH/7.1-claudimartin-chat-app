@@ -54,10 +54,14 @@ window.addEventListener("DOMContentLoaded", () => {
       );
     }
     try {
-      const response = await fetch(`http://localhost:5050/api/users/signup`, {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        `https://71-claudimartin-chat-app-production.up.railway.app/api/users/signup`,
+        {
+          // aqui cambiamos http://localhost:5050/api/users/signup por la direccion de railway
+          method: "POST",
+          body: formData,
+        }
+      );
 
       // Leer el cuerpo de la respuesta solo una vez como texto
       const responseBody = await response.text();
