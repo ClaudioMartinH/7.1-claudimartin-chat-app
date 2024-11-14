@@ -30,7 +30,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://localhost:5050",
+    origin: "https://71-claudimartin-chat-app-production.up.railway.app", // aqui cambiamos http://localhost:5050 por la direccion de railway
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   },
@@ -132,7 +132,7 @@ app.use(
 
 app.use(
   cors({
-    origin: [`http://localhost:${PORT}`],
+    origin: [`https://71-claudimartin-chat-app-production.up.railway.app`], // aqui tambien cambiamos localhost:5050 por railway
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
