@@ -15,7 +15,6 @@ import { socketHandler } from "../utils/socketHandler.js";
 import multer from "multer";
 import { createMainRoom } from "../utils/createMainRoom.js";
 import helmet from "helmet";
-import jwt from "jsonwebtoken";
 import authMiddlewareJWT from "./middleware/auth.middleware.js";
 import session from "express-session";
 import passport from "../utils/passport.config.js";
@@ -114,7 +113,7 @@ app.use(
         "connect-src": [
           "*",
           "https://*.googleapis.com",
-          "http://localhost:5050",
+          "https://71-claudimartin-chat-app-production.up.railway.app/",
           "https://anonymous-animals.azurewebsites.net/",
         ],
         "font-src": ["'self'", "https://fonts.gstatic.com"],
