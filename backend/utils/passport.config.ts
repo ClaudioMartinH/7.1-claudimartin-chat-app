@@ -19,7 +19,7 @@ passport.use(
     {
       clientID: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-      callbackURL: `http://localhost:${PORT}/api/users/auth/google/callback`,
+      callbackURL: `https://71-claudimartin-chat-app-production.up.railway.app/api/users/auth/google/callback`, //aqui cambiamos localhost por la url de railway
     },
     async (
       accessToken: string,
