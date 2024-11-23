@@ -223,6 +223,7 @@ button {
 @media (max-width: 768px) {
   body,
   html {
+    background-image: url("../img/pexels-thongtran95-14825000.jpg");
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -297,6 +298,7 @@ button {
 @media (max-width: 480px) {
   body,
   html {
+    background-image: url("../img/pexels-thongtran95-14825000.jpg");
     background-size: cover;
     margin: 0;
     padding: 0;
