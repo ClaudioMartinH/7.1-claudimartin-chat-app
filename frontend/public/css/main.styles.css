@@ -219,3 +219,158 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@media (max-width: 768px) {
+  body,
+  html {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+  .col-sm-7,
+  .col-sm-5 {
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .col-1 {
+    width: 20%;
+    margin: auto;
+  }
+
+  .messages-container {
+    height: 300px;
+    max-height: 300px;
+    padding: 10px;
+  }
+
+  .users-container,
+  .rooms-container {
+    height: auto;
+    max-height: none;
+    padding: 5px;
+  }
+
+  li {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .header {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+
+  footer {
+    width: 90%;
+    font-size: smaller;
+  }
+
+  main {
+    margin-top: 0;
+    max-height: 400px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .btn-sm {
+    font-size: 12px;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body,
+  html {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .col-sm-7,
+  .col-sm-5 {
+    flex-grow: 1;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .col-1 {
+    width: 30%;
+    margin: auto;
+  }
+
+  .messages-container {
+    height: 250px;
+    max-height: 250px;
+    padding: 5px;
+  }
+
+  .users-container,
+  .rooms-container {
+    height: auto;
+    max-height: none;
+    padding: 5px;
+  }
+
+  li {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .header {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .profile-pic {
+    width: 25px;
+    height: 25px;
+  }
+
+  footer {
+    width: 90%;
+    font-size: smaller;
+  }
+
+  main {
+    margin-top: 0;
+    max-height: 300px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .btn-sm {
+    font-size: 10px;
+    padding: 0.2rem 0.3rem;
+  }
+  .btn.btn-outline-dark {
+    background-color: white !important;
+    color: black !important;
+    border-color: white !important;
+  }
+}
