@@ -99,21 +99,25 @@ input {
 .header {
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
 
-  font-size: 18px;
-  text-shadow: darkgray;
-  font-weight: bolder;
+  font-size: 24px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
   color: rgb(19, 17, 17);
+
   background: linear-gradient(
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1)
+    90deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(230, 230, 230, 0.1)
   );
-  padding-bottom: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .header2 {
   color: rgb(161, 45, 142);
+  font-style: italic;
+  font-size: 20px;
 }
 
 li {
@@ -228,6 +232,22 @@ button {
     margin: 0;
     padding: 0;
   }
+  .header {
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(30, 30, 30, 0.9)
+    );
+    border-bottom: none;
+  }
+
+  .header2 {
+    color: rgba(200, 150, 250, 0.9);
+    font-size: 16px;
+  }
 
   .row {
     flex-direction: column;
@@ -302,6 +322,25 @@ button {
     background-size: cover;
     margin: 0;
     padding: 0;
+  }
+  @media (max-width: 480px) {
+    .header {
+      font-size: 16px;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.9);
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.9),
+        rgba(30, 30, 30, 1)
+      );
+      border-bottom: none;
+      padding: 8px 0;
+    }
+
+    .header2 {
+      color: rgba(200, 150, 250, 0.9);
+      font-size: 14px;
+    }
   }
 
   .row {
