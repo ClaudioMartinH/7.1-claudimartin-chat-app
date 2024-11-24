@@ -245,8 +245,11 @@ button {
   }
 
   .header2 {
-    color: rgba(200, 150, 250, 0.9);
+    color: rgba(39, 24, 150, 0.9);
     font-size: 16px;
+  }
+  .container {
+    background-color: aliceblue;
   }
 
   .row {
@@ -336,9 +339,12 @@ button {
       border-bottom: none;
       padding: 8px 0;
     }
+    .container {
+      background-color: aliceblue;
+    }
 
     .header2 {
-      color: rgba(200, 150, 250, 0.9);
+      color: rgba(0, 42, 157, 0.9);
       font-size: 14px;
     }
   }
