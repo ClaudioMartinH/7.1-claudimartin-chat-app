@@ -249,7 +249,12 @@ button {
     font-size: 16px;
   }
   .container {
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.597);
+    border-radius: 9px;
+  }
+  .container-fluid {
+    background-color: rgba(240, 248, 255, 0.597);
+    border-radius: 9px;
   }
 
   .row {
@@ -340,7 +345,12 @@ button {
       padding: 8px 0;
     }
     .container {
-      background-color: aliceblue;
+      background-color: rgba(240, 248, 255, 0.576);
+      border-radius: 9px;
+    }
+    .container-fluid {
+      background-color: rgba(240, 248, 255, 0.576);
+      border-radius: 9px;
     }
 
     .header2 {
