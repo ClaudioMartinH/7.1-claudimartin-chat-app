@@ -4,6 +4,7 @@ html {
   background-size: cover;
   height: 85%;
 }
+
 .form-signin {
   max-width: 100%;
   padding: 15px;
@@ -24,6 +25,7 @@ html {
   border-radius: 5px;
   background-color: rgba(100, 148, 237, 0.193);
 }
+
 .header-full-width {
   width: 100%;
   text-align: center;
@@ -53,10 +55,92 @@ html {
   height: 90%;
   overflow: hidden;
 }
+
 .form-control {
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #000;
+}
+
+/* Estilos para botones */
+button,
+input[type="button"],
+input[type="submit"] {
+  background-color: #007bff; /* Color de fondo del botón */
+  color: white; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  padding: 0.375rem 0.75rem; /* Padding del botón */
+  border-radius: 0.25rem; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo puntero al pasar sobre el botón */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body,
+  html {
+    background-image: url("../img/pexels-thongtran95-14825000.jpg");
+    background-size: cover;
+  }
+  .form-signin {
+    padding: 10px;
+  }
+
+  .header {
+    margin-bottom: 15px;
+  }
+
+  .header-full-width {
+    padding: 15px0;
+  }
+
+  .centered-form {
+    height: auto;
+    min-height: 80vh;
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    font-size: larger; /* Aumentar el tamaño de fuente si es necesario */
+  }
+}
+
+@media (max-width: 480px) {
+  body,
+  html {
+    background-image: url("../img/pexels-thongtran95-14825000.jpg");
+    background-size: cover;
+    height: 100%;
+  }
+
+  .form-signin {
+    padding: 5px;
+  }
+
+  .header {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+
+  .header-full-width {
+    padding: 10px0;
+  }
+
+  .centered-form {
+    height: auto;
+    min-height: 90vh;
+  }
+
+  .form-control {
+    font-size: 14px; /* Ajustar tamaño de fuente en móviles */
+  }
+
+  button,
+  input[type="button"],
+  input[type="submit"] {
+    font-size: x-large; /* Aumentar el tamaño de fuente de los botones si es necesario */
+    padding: 0.5rem; /* Aumentar el padding para botones más grandes */
+  }
 }
 @media (max-width: 768px) {
   .centered-form {
